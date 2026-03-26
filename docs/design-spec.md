@@ -111,7 +111,10 @@
 - `https://images.unsplash.com/photo-1596934386514-10814ad5bb98?w=600&h=400&fit=crop` (Geometric tattoo design)
 - `https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=400&h=600&fit=crop` (Color tattoo work)
 - `https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop` (Black and grey work)
-- Add 8+ more for full gallery
+- `https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=600&fit=crop` (Fine line work)
+- `https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop` (Neo-traditional design)
+- `https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=600&fit=crop` (Colorful sleeve work)
+- `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop` (Detailed black work)
 
 ### Tā Moko Page
 **Cultural Header**:

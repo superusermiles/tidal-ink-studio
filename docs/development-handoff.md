@@ -103,22 +103,31 @@ const artists = [
     name: "Sarah Te Whare",
     specialty: "Tā Moko & Traditional Polynesian",
     imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    bio: "Māori artist specializing in culturally authentic tā moko...",
-    portfolioImages: [...]
+    bio: "Māori artist specializing in culturally authentic tā moko and traditional Polynesian designs. Sarah brings deep cultural knowledge and respect to every piece, ensuring cultural appropriateness and meaning.",
+    portfolioImages: [
+      "https://images.unsplash.com/photo-1520637836862-4d197d17c83a?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1565058739960-8d9ced8c0b51?w=400&h=600&fit=crop"
+    ]
   },
   {
     name: "Marcus Chen", 
     specialty: "Neo-Traditional & Color Work",
     imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    bio: "Bringing bold color and modern techniques...",
-    portfolioImages: [...]
+    bio: "Bringing bold color and modern techniques to traditional tattoo styles. Marcus specializes in vibrant neo-traditional pieces that blend classic imagery with contemporary artistry.",
+    portfolioImages: [
+      "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=600&fit=crop"
+    ]
   },
   {
     name: "Jamie Rivera",
     specialty: "Geometric & Fine Line",
     imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b830?w=400&h=400&fit=crop", 
-    bio: "Precision geometric designs and delicate fine line work...",
-    portfolioImages: [...]
+    bio: "Precision geometric designs and delicate fine line work. Jamie creates intricate patterns and minimalist pieces that require exceptional technical skill and artistic vision.",
+    portfolioImages: [
+      "https://images.unsplash.com/photo-1596934386514-10814ad5bb98?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=600&fit=crop"
+    ]
   }
 ]
 ```
@@ -132,24 +141,57 @@ const galleryImages = [
   {
     url: "https://images.unsplash.com/photo-1565058739960-8d9ced8c0b51?w=400&h=600&fit=crop",
     category: "traditional",
-    alt: "Traditional tattoo work"
+    alt: "Traditional Polynesian tattoo design",
+    artist: "Sarah Te Whare"
   },
   {
     url: "https://images.unsplash.com/photo-1596934386514-10814ad5bb98?w=600&h=400&fit=crop", 
     category: "geometric",
-    alt: "Geometric tattoo design"
+    alt: "Geometric mandala tattoo design",
+    artist: "Jamie Rivera"
   },
   {
     url: "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=400&h=600&fit=crop",
     category: "color", 
-    alt: "Color tattoo work"
+    alt: "Colorful neo-traditional tattoo",
+    artist: "Marcus Chen"
   },
   {
     url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
     category: "blackgrey",
-    alt: "Black and grey tattoo"
+    alt: "Black and grey portrait tattoo",
+    artist: "Marcus Chen"
   },
-  // Add 8+ more images
+  {
+    url: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=600&fit=crop",
+    category: "geometric",
+    alt: "Fine line geometric tattoo",
+    artist: "Jamie Rivera"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop",
+    category: "traditional",
+    alt: "Neo-traditional flower design",
+    artist: "Marcus Chen"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=600&fit=crop",
+    category: "color",
+    alt: "Colorful sleeve tattoo work",
+    artist: "Marcus Chen"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    category: "blackgrey",
+    alt: "Detailed black and grey work",
+    artist: "Sarah Te Whare"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1520637836862-4d197d17c83a?w=400&h=600&fit=crop",
+    category: "tamoko",
+    alt: "Traditional tā moko design",
+    artist: "Sarah Te Whare"
+  }
 ]
 ```
 
@@ -161,13 +203,14 @@ Fields:
 - Email (required)  
 - Phone
 - Service type: Tattoo | Piercing | Consultation
-- Preferred artist dropdown
+- Preferred artist dropdown (Sarah Te Whare | Marcus Chen | Jamie Rivera | No preference)
 - Description textarea
 - Reference image upload (multiple files)
 - Preferred date/time
 - Size/placement details
+- Budget range
 
-Form should submit to Netlify Forms or similar.
+Form should submit to Netlify Forms or similar service.
 
 #### Contact Info Component
 ```js
@@ -179,6 +222,10 @@ const studioInfo = {
     "Tuesday-Saturday": "10am-6pm",
     "Sunday": "11am-4pm", 
     "Monday": "Closed"
+  },
+  social: {
+    instagram: "@tidalinkstudio",
+    facebook: "TidalInkStudioNZ"
   }
 }
 ```
@@ -199,19 +246,22 @@ const studioInfo = {
 ### Specific Image URLs by Page
 
 **Homepage**:
-- Hero: `https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&h=800&fit=crop`
-- About: `https://images.unsplash.com/photo-1594736797933-d0f06ba42eb9?w=800&h=600&fit=crop`
+- Hero: `https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&h=800&fit=crop` (Modern, bright tattoo studio interior)
+- About: `https://images.unsplash.com/photo-1594736797933-d0f06ba42eb9?w=800&h=600&fit=crop` (Ocean view from Mount Maunganui)
 
-**Gallery Page**: Use the `galleryImages` array above, add 6+ more
+**Gallery Page**: Use the `galleryImages` array above (9 images total)
 
 **Tā Moko Page**: 
-- Header: `https://images.unsplash.com/photo-1520637836862-4d197d17c83a?w=1400&h=600&fit=crop`
+- Header: `https://images.unsplash.com/photo-1520637836862-4d197d17c83a?w=1400&h=600&fit=crop` (Māori cultural imagery)
+- Educational: `https://images.unsplash.com/photo-1565058739960-8d9ced8c0b51?w=800&h=600&fit=crop` (Traditional design detail)
 
 **Piercing Page**:
-- Service: `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop`
+- Service: `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop` (Clean, modern piercing setup)
+- Aftercare: `https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop` (Clean studio environment)
 
 **Contact Page**:
-- Studio: `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop`
+- Studio: `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop` (Studio interior wide shot)
+- Location: `https://images.unsplash.com/photo-1594736797933-d0f06ba42eb9?w=800&h=400&fit=crop` (Mount Maunganui waterfront)
 
 ## Responsive Design
 
@@ -317,7 +367,11 @@ Each page needs:
     "addressCountry": "NZ"
   },
   "telephone": "+64-7-574-8900",
-  "url": "https://tidalink.nz"
+  "url": "https://tidalink.nz",
+  "openingHours": [
+    "Tu-Sa 10:00-18:00",
+    "Su 11:00-16:00"
+  ]
 }
 ```
 

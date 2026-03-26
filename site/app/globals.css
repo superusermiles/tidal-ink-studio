@@ -1,11 +1,6 @@
-@import "tailwindcss";
-
-:root {
-  --ocean-teal: #2a7b88;
-  --warm-sand: #e8d5b7;
-  --deep-navy: #1b2838;
-  --coral-accent: #e07a5f;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
@@ -18,14 +13,3 @@ h4,
 .font-space {
   font-family: var(--font-space), system-ui, sans-serif;
 }
-
-.text-ocean-teal { color: var(--ocean-teal); }
-.text-deep-navy { color: var(--deep-navy); }
-.text-coral-accent { color: var(--coral-accent); }
-.bg-ocean-teal { background-color: var(--ocean-teal); }
-.bg-warm-sand { background-color: var(--warm-sand); }
-.bg-deep-navy { background-color: var(--deep-navy); }
-.border-ocean-teal\/15 { border-color: color-mix(in srgb, var(--ocean-teal) 15%, transparent); }
-.border-ocean-teal\/10 { border-color: color-mix(in srgb, var(--ocean-teal) 10%, transparent); }
-.from-ocean-teal\/95 { --tw-gradient-from: color-mix(in srgb, var(--ocean-teal) 95%, transparent) var(--tw-gradient-from-position); --tw-gradient-to: color-mix(in srgb, var(--ocean-teal) 0%, transparent) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.to-deep-navy\/90 { --tw-gradient-to: color-mix(in srgb, var(--deep-navy) 90%, transparent) var(--tw-gradient-to-position); }
